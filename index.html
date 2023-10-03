@@ -1,50 +1,46 @@
-<!-- style taken from https://achariam.com/  -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>...</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="preload" />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="referrer" content="no-referrer" />
-    <meta property="og:url" content="https://ayush.sh" />
-    <meta property="og:title" content="ayush" />
-    <meta property="og:description" content=":)" />
-    <meta property="og:image" content="https://ayush.sh/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@ayshptk" />
-    <meta name="twitter:title" content="ayush" />
-    <meta name="twitter:description" content=":)" />
-    <meta name="twitter:image" content="https://ayush.sh/" />
-  </head>
 
-  <body>
-    <h1 onclick="page('ayush')" class="x"><span>Ayush Pathak</span></h1>
-    <div id="page"></div>
-    <br /><br />emails at hey at ayush dot sh, jpegs ayushp dot eth
-    <ul class="nav">
-      <li class="li">
-        <x class="external" onclick="url('https://execute.dev')">wizardry</x>
-      </li>
-      <li class="li">
-        <x class="external" onclick="url('https://twitter.com/ayshptk')"
-          >thoughts</x
-        >
-      </li>
-      <li class="li">
-        <x class="internal" onclick="page('about')">about</x>
-      </li>
-      <li class="li">
-        <x class="internal" onclick="page('cool things',false)">cool things</x>
-      </li>
-    </ul>
-    <script>
-      let currentPage;
-    </script>
-    <script src="./engine.js">
-      <p>please enable js to view this site :)</p>
-    </script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./style.css" as="style">
+    <link rel="stylesheet" href="./style.css">
+    <title>...</title>
+    <meta name="referrer" content="no-referrer">
+    <meta property="og:url" content="https://ayush.sh">
+    <meta property="og:title" content="Ayush Pathak">
+    <meta property="og:description" content=":)">
+    <meta property="og:image" content="https://ayush.sh/image.jpg"> <!-- Placeholder image link -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ayshptk">
+    <meta name="twitter:title" content="Ayush Pathak">
+    <meta name="twitter:description" content=":)">
+    <meta name="twitter:image" content="https://ayush.sh/image.jpg"> <!-- Placeholder image link -->
+</head>
+
+<body>
+    <header>
+        <h1 onclick="page('ayush')" class="x" role="button" aria-label="Go to Ayush's page"><span>Ayush Pathak</span></h1>
+    </header>
+
+    <main id="page"></main>
+
+    <footer>
+        <p>Emails at a [at] ayush [dot] sh, jpegs ayushp [dot] eth</p>
+        <nav class="nav">
+            <ul>
+                <li class="li"><a href="https://induced.ai" class="external" aria-label="Wizardry" target="_blank" rel="noopener noreferrer">wizardry</a></li>
+                <li class="li"><a href="https://twitter.com/ayshptk" class="external" aria-label="Thoughts on Twitter" target="_blank" rel="noopener noreferrer">thoughts</a></li>
+                <li class="li"><button class="internal" onclick="page('about')">about</button></li>
+                <!-- <li class="li"><button class="internal" onclick="page('cool things',false)">cool things</button></li> -->
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="./engine.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  </body>
+    <noscript>Please enable JavaScript to view this site :)</noscript>
+</body>
+
 </html>
